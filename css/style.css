@@ -387,3 +387,39 @@ button:focus{
     height :2px;
     background-color:  var(--color-accent);
 }
+
+/* Testimonial */
+.testimonials {
+    margin : 3rem;
+}
+
+.testimonial {
+    display : flex;
+    gap : 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+/* testimonial 자식 중 짝수 번째 해당하는 친구의 img를 선택*/
+.testimonial:nth-child(even) .testimonial__img{
+    order : 1;
+}
+
+.testimonial__img {
+    width : 150px;
+    height : 150px;
+    border-radius : 100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.testimonial__bubble{
+    padding : 1rem;
+    border-radius : 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.testimonial__bubble__name{
+    color : var(--color-accent);
+    font-weight : bold;
+    filter :brightness(70%);
+} 
