@@ -157,23 +157,31 @@
     </section>
     <!-- Work -->
     <section id="work" class="section">
-        <h2 class="title">My Work</h2>
+        <div class="max-container">
+            <h2 class="title">My Work</h2>
         <p class="description">Projects</p>
-        <ul>
+        <ul class="categories">
             <li>
-                <button>All <span>8</span></button>
+                <button class="category category--selected">
+                    All <span class="category__count">8</span>
+                </button>
             </li>
             <li>
-                <button>Front-end <span>3</span></button>
+                <button class="category">
+                    Front-end <span class="category__count">3</span>
+                </button>
             </li>
             <li>
-                <button>back-end <span>3</span></button>
+                <button class="category">
+                    back-end <span class="category__count">3</span>
+                </button>
             </li>
             <li>
-                <button>Mobile <span>2</span></button>
+                <button class="category">
+                    Mobile <span class="category__count">2</span>
+                </button>
             </li>
         </ul>
-
         <ul>
             <!-- 클릭해서 새로운 화면에서 열어주려면? → target='_blank' -->
             <li>
@@ -249,6 +257,7 @@
                 </a>
             </li>
         </ul>
+        </div>
     </section>
     <!-- Testimonials -->
     <section id="testimonial" class="section">
