@@ -335,3 +335,55 @@ button:focus{
     opacity: 1;
     top : 0;
 }
+
+.projects {
+    display : grid;
+    grid-template-columns : repeat(4, 1fr);
+    grid-template-rows : repeat(2, 1fr);
+    gap : 1rem;
+}
+
+.project {
+    position: relative;
+    border-radius : 8px;
+    /* 이미지가 삐져 나오는 것을 막아줌 */
+    overflow : hidden;
+}
+
+.project__img {
+    width : 100%;
+}
+
+.project__metadata {
+    position:absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    background-color : var(--color-black);
+    opacity : 0;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items : center;
+    transition : all 250ms ease-in;
+    transform : translateY(-10px);
+}
+
+.project__metadata:hover {
+    opacity : 0.8;
+    transform : translateY(-0px);
+}
+
+/* html에는 없는데, 꾸미기 용도로 넣어주는 CSS 선택자 (before, after)*/
+.project__metadata__title:after {
+    content : '';
+    display : block;
+    position : relative;
+    left : 50%;
+    transform:  translateX(-50%);
+    margin : 0.5rem 0 ;
+    width : 50px;
+    height :2px;
+    background-color:  var(--color-accent);
+}
