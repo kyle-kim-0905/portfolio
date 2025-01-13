@@ -14,4 +14,15 @@ document.addEventListener('scroll', () => {
     else {
         header.classList.remove('header--dark'); 
     }
-})
+});
+
+// 홈화면 투명하게 처리
+const home = document.querySelector('.home__container');
+const homeHeight = home.offsetHeight;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - (window.scrollY / homeHeight);
+
+    //console.log("Home Height : %f vs ScrollY : %f", homeHeight , window.scrollY);
+});
+
+
