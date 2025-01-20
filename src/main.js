@@ -21,8 +21,21 @@ const home = document.querySelector('.home__container');
 const homeHeight = home.offsetHeight;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - (window.scrollY / homeHeight);
-
     //console.log("Home Height : %f vs ScrollY : %f", homeHeight , window.scrollY);
+});
+
+
+// Arrow up버튼을 아래로 스크롤시 투명하게 처리
+const arrowUp = document.querySelector('.arrow-up');
+
+// 초기 설정
+document.addEventListener('DOMContentLoaded', () => {
+    arrowUp.style.opacity = 0;
+});
+
+document.addEventListener('scroll', () => {
+    const homeRatio = (window.scrollY / homeHeight);
+    arrowUp.style.opacity = (homeRatio > 0.5) ? 1 : 0;
 });
 
 
