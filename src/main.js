@@ -1,3 +1,6 @@
+// 나쁜관행의 문법을 쓴다면 에러 메세지 띄워줌
+'use strict';
+
 // Header에 페이지 아래로 스크롤시 다크 스타일링 적용
 const header = document.querySelector('.header');
 const headerHeight = header.getBoundingClientRect().height;
