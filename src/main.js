@@ -39,3 +39,15 @@ document.addEventListener('scroll', () => {
 });
 
 
+// NavBar 토클버튼 클릭 처리
+const navBarMenu = document.querySelector('.header__menu');
+const navBarToggle = document.querySelector('.header__toggle');
+
+navBarToggle.addEventListener('click' , () =>{
+    navBarMenu.classList.toggle('open');
+});
+
+// NavBar 메뉴 클릭시 메뉴를 자동으로 닫아줌
+navBarMenu.addEventListener('click' , () =>{
+    navBarMenu.classList.remove('open');
+});
